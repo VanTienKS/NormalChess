@@ -109,10 +109,14 @@ class Main:
             
                 #key press
                 elif event.type == pygame.KEYDOWN:
-                    
                     # changing themes
                     if event.key == pygame.K_t:
                         game.change_theme()
+                    if event.key == pygame.K_r:
+                        game.reset()
+                        game = self.game
+                        board = self.game.board
+                        dragger = self.game.dragger
 
             pygame.display.update()
 
